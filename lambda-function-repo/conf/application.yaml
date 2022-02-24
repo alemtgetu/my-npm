@@ -1,0 +1,35 @@
+---
+# defaults: &defaults
+LambdaCdkConfig:
+  application: sample
+  lambdaRuntime: NODEJS_14_X
+  stageName: dev
+  srcPath: '../lambda-function-repo/src'
+  functions:
+    - functionName: sample_one
+      apiGateway: true
+      handler: index.main
+      roleArn: "arn:aws:iam::010805440944:role/service-Role-ForLamdaCdk"
+      memorySize:  1024
+      timeout: 300
+      methods:
+          - POST
+          - GET
+    - functionName: sample_two
+      apiGateway: true
+      handler: index.main_two
+      roleArn: "arn:aws:iam::010805440944:role/service-Role-ForLamdaCdk"
+      memorySize:  1024
+      timeout: 300
+      methods:
+          - POST
+          - GET
+	
+# development:
+# 	<<: *defaults
+	
+# test:
+# 	<<: *defaults
+	
+# production:
+# 	<<: *defaults

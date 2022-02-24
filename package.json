@@ -1,0 +1,32 @@
+{
+  "name": "lambda-cdk",
+  "version": "0.1.0",
+  "main": "dist/lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk",
+    "lint": "eslint --ext .js,.ts ."
+  },
+  "devDependencies": {
+    "@aws-cdk/assert": "1.124.0",
+    "@types/jest": "^26.0.10",
+    "@types/node": "10.17.27",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "aws-cdk": "1.124.0",
+    "eslint": "^8.9.0",
+    "jest": "^26.4.2",
+    "prettier": "^2.5.1",
+    "ts-jest": "^26.2.0",
+    "ts-node": "^9.0.0",
+    "typescript": "~3.9.7"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-apigateway": "1.124.0",
+    "@aws-cdk/aws-lambda": "1.124.0",
+    "@aws-cdk/core": "1.124.0",
+    "js-yaml": "^3.14.1"
+  }
+}
